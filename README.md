@@ -88,7 +88,7 @@ The **target variable** is income, labeled as **≤50K or >50K**.
 
 ### **1. Clone the Repository**
 ``` bash
-git clone https://github.com/yourusername/income-prediction.git
+git close https://github.com/Devin-Shrode/Census-Income-Analysis-and-Modeling
 cd income-prediction
 ```
 
@@ -139,12 +139,14 @@ docker run -p 8000:8000 census_income_api
 ---
 
 ## **Acknowledgments**
-This project was built using publicly available data from the **UCI Machine Learning Repository**.  
+This project was built using publicly available data from the **UCI Machine Learning Repository** (https://archive.ics.uci.edu/dataset/20/census+income).  
 Libraries used include **pandas, NumPy, scikit-learn, CatBoost, FastAPI, and Docker**.
 
 ---
 
 ## **Contact**
-For any questions or collaborations, feel free to reach out via:  
-📧 Email: [your_email@example.com](mailto:your_email@example.com)  
-🔗 GitHub: [github.com/yourusername](https://github.com/yourusername)  
+For any questions or collaboration opportunities, reach out at:
+- **Email**: devin.shrode@proton.me  
+- **LinkedIn**: [linkedin.com/in/DevinShrode](https://www.linkedin.com/in/DevinShrode)  
+- **GitHub**: [github.com/Devin-Shrode/Wine-Quality](https://github.com/Devin-Shrode/Wine-Quality)  
+
