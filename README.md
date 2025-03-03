@@ -87,54 +87,54 @@ The **target variable** is income, labeled as **≤50K or >50K**.
 ## **Installation & Running the Project**
 
 ### **1. Clone the Repository**
-TRIPLE BACKTICKS HERE
+```
 bash
 git clone https://github.com/Devin-Shrode/Census-Income-Analysis-and-Modeling
 cd income-prediction
-TRIPLE BACKTICKS HERE
+```
 
 ### **2. Create a Virtual Environment**
-TRIPLE BACKTICKS HERE
+```
 bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-TRIPLE BACKTICKS HERE
+```
 
 ### **3. Install Dependencies**
-TRIPLE BACKTICKS HERE
+```
 bash
 pip install -r requirements.txt
-TRIPLE BACKTICKS HERE
+```
 
 ### **4. Run the API Locally**
 Start the FastAPI server:
-TRIPLE BACKTICKS HERE
+```
 bash
 uvicorn census_income_api:app --host 0.0.0.0 --port 8000 --reload
-TRIPLE BACKTICKS HERE
+```
 
 ### **5. Sending a Prediction Request**
 Use **Postman** or **cURL** to send a `POST` request:
-TRIPLE BACKTICKS HERE
+```
 bash
 curl -X 'POST' 'http://127.0.0.1:8000/predict' -H "Content-Type: application/json" -d '{"features": [39, 13, 0, 0, 40, 1, 0, 1, 1, 0, 1, 1, ... ]}'
-TRIPLE BACKTICKS HERE
+```
 
 The API returns:
-TRIPLE BACKTICKS HERE
+```
 json
 {
     "predicted_income": ">50K"
 }
-TRIPLE BACKTICKS HERE
+```
 
 ### **6. Running the API in Docker**
 Build and run the container:
-TRIPLE BACKTICKS HERE
+```
 bash
 docker build -t census_income_api .
 docker run -p 8000:8000 census_income_api
-TRIPLE BACKTICKS HERE
+```
 
 ---
 
