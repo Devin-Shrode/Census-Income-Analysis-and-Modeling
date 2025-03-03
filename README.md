@@ -56,11 +56,11 @@ The **target variable** is income, labeled as **≤50K or >50K**.
   - **LightGBM**
   - **CatBoost** (Final Model)
 - Used **GridSearchCV & RandomizedSearchCV** for hyperparameter tuning.
-- **CatBoost achieved the highest overall performance** and was selected as the final model.
+- **CatBoost (Baseline) achieved the highest overall performance** and was selected as the final model.
 
 ### **4. Model Calibration & Decision Threshold Optimization**
 - **Plotted calibration curves** to assess probability estimation accuracy.
-- Adjusted the **decision threshold from 0.50 to 0.52** to optimize the balance between **precision and recall**.
+- Adjusted the **decision threshold from 0.50 to 0.41** to optimize the balance between **precision and recall**.
 
 ### **5. Model Deployment**
 - Developed a **FastAPI application** for serving predictions.
@@ -70,12 +70,12 @@ The **target variable** is income, labeled as **≤50K or >50K**.
 
 ## **Results**
 
-### **Best Model: CatBoost**
-| Metric     | Default Threshold (0.50) | Optimized Threshold (0.52) |
+### **Best Model: CatBoost (Baseline)**
+| Metric     | Default Threshold (0.50) | Optimized Threshold (0.41) |
 |------------|----------------|----------------|
-| **Accuracy** | 85.72% | 86.03% |
-| **F1-Score** | 0.7157 | 0.7170 |
-| **ROC-AUC** | 0.9245 | 0.9245 |
+| **Accuracy** | 85.51% | 87.04% |
+| **F1-Score** | 0.7123 | 0.7317 |
+| **ROC-AUC** | 0.9261 | 0.9305 |
 
 ### **Key Findings**
 - **Education, Occupation, and Capital Gain** were the strongest predictors of income level.
@@ -87,47 +87,54 @@ The **target variable** is income, labeled as **≤50K or >50K**.
 ## **Installation & Running the Project**
 
 ### **1. Clone the Repository**
-``` bash
-git close https://github.com/Devin-Shrode/Census-Income-Analysis-and-Modeling
+TRIPLE BACKTICKS HERE
+bash
+git clone https://github.com/Devin-Shrode/Census-Income-Analysis-and-Modeling
 cd income-prediction
-```
+TRIPLE BACKTICKS HERE
 
 ### **2. Create a Virtual Environment**
-``` bash
+TRIPLE BACKTICKS HERE
+bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+TRIPLE BACKTICKS HERE
 
 ### **3. Install Dependencies**
-``` bash
+TRIPLE BACKTICKS HERE
+bash
 pip install -r requirements.txt
-```
+TRIPLE BACKTICKS HERE
 
 ### **4. Run the API Locally**
 Start the FastAPI server:
-``` bash
+TRIPLE BACKTICKS HERE
+bash
 uvicorn census_income_api:app --host 0.0.0.0 --port 8000 --reload
-```
+TRIPLE BACKTICKS HERE
 
 ### **5. Sending a Prediction Request**
 Use **Postman** or **cURL** to send a `POST` request:
-``` bash
-curl -X 'POST' 'http://127.0.0.1:8000/predict' -H 'Content-Type: application/json' -d '{"features": [39, 13, 0, 0, 40, 1, 0, 1, 1, 0, 1, 1, ... ]}'
-```
+TRIPLE BACKTICKS HERE
+bash
+curl -X 'POST' 'http://127.0.0.1:8000/predict' -H "Content-Type: application/json" -d '{"features": [39, 13, 0, 0, 40, 1, 0, 1, 1, 0, 1, 1, ... ]}'
+TRIPLE BACKTICKS HERE
 
 The API returns:
-``` json
+TRIPLE BACKTICKS HERE
+json
 {
     "predicted_income": ">50K"
 }
-```
+TRIPLE BACKTICKS HERE
 
 ### **6. Running the API in Docker**
 Build and run the container:
-``` bash
+TRIPLE BACKTICKS HERE
+bash
 docker build -t census_income_api .
 docker run -p 8000:8000 census_income_api
-```
+TRIPLE BACKTICKS HERE
 
 ---
 
@@ -148,5 +155,4 @@ Libraries used include **pandas, NumPy, scikit-learn, CatBoost, FastAPI, and Doc
 For any questions or collaboration opportunities, reach out at:
 - **Email**: devin.shrode@proton.me  
 - **LinkedIn**: [linkedin.com/in/DevinShrode](https://www.linkedin.com/in/DevinShrode)  
-- **GitHub**: [github.com/Devin-Shrode/Wine-Quality](https://github.com/Devin-Shrode/Wine-Quality)  
-
+- **GitHub**: [github.com/Devin-Shrode](https://github.com/Devin-Shrode)  
